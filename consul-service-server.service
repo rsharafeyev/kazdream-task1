@@ -1,0 +1,10 @@
+[Unit]
+Description=Consul server
+Wants=network-online.target
+After=network-online.target
+[Service]
+ExecStart= /bin/sh -c "/usr/bin/consul agent -config-dir /vagrant/consul-config/server"
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target
