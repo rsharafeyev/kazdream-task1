@@ -3,7 +3,7 @@ Description=Consul server
 Wants=network-online.target
 After=network-online.target
 [Service]
-ExecStart= /bin/sh -c "/usr/bin/consul agent -config-dir /vagrant/consul-config/server"
+ExecStart= /bin/sh -c "/usr/bin/consul agent -config-dir /vagrant/consul-config"
 Restart=always
 RestartSec=10
 [Install]
